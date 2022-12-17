@@ -1,5 +1,7 @@
-//Copied from The Gold Standard (GOLD)
-
+// Squad.cfg 1.1.0.1
+// The Gold Standard (GOLD)
+// created: 
+// updated: 27 Jun 2021
 
 SCANSAT_SENSOR:NEEDS[SCANsat]
 {
@@ -13,7 +15,7 @@ SCANSAT_SENSOR:NEEDS[SCANsat]
 	SCANtype = 67108864 //2^26
 }
 
-@PART[SurveyScanner]:NEEDS[SCANsat,FFTISRU]:FOR[FFTISRU]
+@PART[SurveyScanner]:NEEDS[SCANsat,TheGoldStandard]:FOR[TheGoldStandard]
 {
 	MODULE
 	{
@@ -32,7 +34,7 @@ SCANSAT_SENSOR:NEEDS[SCANsat]
 	}
 
 // }
-// @PART[SurveyScanner]:NEEDS[SCANsat,FFTISRU]:FOR[FFTISRU]
+// @PART[SurveyScanner]:NEEDS[SCANsat,TheGoldStandard]:FOR[TheGoldStandard]
 // {
 
 	MODULE
@@ -52,7 +54,7 @@ SCANSAT_SENSOR:NEEDS[SCANsat]
 	}
 }
 
-@PART[OrbitalScanner]:NEEDS[SCANsat,FFTISRU]:FOR[FFTISRU]
+@PART[OrbitalScanner]:NEEDS[SCANsat,TheGoldStandard]:FOR[TheGoldStandard]
 {
 	MODULE
 	{
@@ -97,3 +99,6 @@ SCANSAT_SENSOR:NEEDS[SCANsat]
 		}
 	}
 }
+
+// GPLv2
+// zer0Kerbal
