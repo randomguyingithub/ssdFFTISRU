@@ -1,0 +1,167 @@
+
+// Copied from The Gold Standard (GOLD)
+
+@PART[SurfaceScanner]:NEEDS[FFTISRU]:FOR[FFTISRU]
+{
+
+	MODULE
+	{
+		name = ModuleResourceScanner
+		ScannerType = 1
+		ResourceName = lqdDeuterium // Unobtainium
+		MaxAbundanceAltitude = 1000 // 10000
+		RequiresUnlock = false
+	}
+
+
+	MODULE
+	{
+		name=ModuleAnalysisResource
+		resourceName = lqdDeuterium // Unobtainium
+	}
+}
+
+@PART[OrbitalScanner]:NEEDS[FFTISRU]:FOR[FFTISRU]
+{
+
+	MODULE
+	{
+	name = ModuleResourceScanner
+	MaxAbundanceAltitude = 500000
+	RequiresUnlock = False
+	ScannerType = 0
+	ResourceName = lqdDeuterium // Unobtainium
+	}
+}
+
+// @PART[MiniDrill]:NEEDS[FFTISRU]:FOR[FFTISRU]
+// {
+	// @MODULE[ModuleResourceHarvester]
+	// {
+		// ConverterName = Ore Harvester
+		// StartActionName = Ore Harvester Start
+		// StopActionName = Ore Harvester Stop
+		// ToggleActionName = Toggle Ore Harvester
+	// }
+// }
+// @PART[RadialDrill]:NEEDS[FFTISRU]:FOR[FFTISRU]
+// {
+	// @MODULE[ModuleResourceHarvester]
+	// {
+		// ConverterName = Ore Harvester
+		// StartActionName = Ore Harvester Start
+		// StopActionName = Ore Harvester Stop
+		// ToggleActionName = Toggle Ore Harvester
+	// }
+// }
+@PART[MiniDrill]:NEEDS[FFTISRU]:FOR[FFTISRU]
+{
+	
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		upgradeCost = 50
+		HarvesterType = 0
+		Efficiency = 0.2
+		ResourceName = lqdDeuterium // Unobtainium
+		ConverterName = lqdDeuterium Harvester // Unobtainium Harvester
+		StartActionName = lqdDeuterium Harvester Start // Unobtainium Harvester Start
+		StopActionName = lqdDeuterium Harvester Stop // Unobtainium Harvester Stop
+		ToggleActionName = Toggle lqdDeuterium Harvester // Toggle Unobtainium Harvester
+		ImpactTransform = ImpactTransform
+		ImpactRange = 1.08 // 5
+		AutoShutdown = true
+		EfficiencyBonus = 1.5
+		GeneratesHeat = true
+		INPUT_RESOURCE
+		{
+			ResourceName = ElectricCharge
+			Ratio = 6
+		}
+		UseSpecialistBonus = true
+		SpecialistEfficiencyFactor = 0.2
+		SpecialistBonusBase = 0.05
+		
+		Specialty = Scientist
+		ExperienceEffect = PartScienceReturn
+		EfficiencyBonus = 1.5
+		
+		UseSpecialistHeatBonus = true
+		SpecialistHeatFactor = 0.1
+		TemperatureModifier
+		{
+			key = 0 10000
+			key = 250 5000
+			key = 500 2500
+			key = 750 250
+			key = 1000 0
+		}		
+		UseSpecialistBonus = true
+		SpecialistEfficiencyFactor = 0.2
+		SpecialistBonusBase = 0.05
+		Specialty = Engineer
+		ExperienceEffect = DrillSkill
+		ThermalEfficiency 
+		{
+			key = 0 0.1
+			key = 250 .1
+			key = 500 1
+			key = 750 .1
+			key = 1000 0
+		}
+		HarvestThreshold = 0.02
+	}
+}
+
+@PART[RadialDrill]:NEEDS[FFTISRU]:FOR[FFTISRU]
+{
+	MODULE
+	{
+		name = ModuleResourceHarvester
+		HarvesterType = 0
+		Efficiency = 0.5
+		ResourceName = lqdDeuterium // Unobtainium
+		ConverterName = lqdDeuterium Harvester // Unobtainium Harvester
+		StartActionName = lqdDeuterium Harvester Start // Unobtainium Harvester Start
+		StopActionName = lqdDeuterium Harvester Stop // Unobtainium Harvester Stop
+		ToggleActionName = Toggle lqdDeuterium Harvester // Toggle Unobtainium Harvester
+		ImpactTransform = ImpactTransform
+		Specialty = Scientist 
+		ImpactRange = 5
+		AutoShutdown = true
+		UseSpecialistBonus = true
+		SpecialistEfficiencyFactor = 0.2
+		SpecialistBonusBase = 0.05
+		EfficiencyBonus = 2
+		GeneratesHeat = true
+		INPUT_RESOURCE
+		{
+			ResourceName = ElectricCharge
+			Ratio = 25
+		}
+		TemperatureModifier
+		{
+			key = 0 10000
+			key = 250 7500
+			key = 500 5000
+			key = 750 500
+			key = 1000 0
+		}		
+		UseSpecialistBonus = true
+		SpecialistEfficiencyFactor = 0.2
+		SpecialistBonusBase = 0.05
+		Specialty = Engineer
+		EfficiencyBonus = 2
+		ThermalEfficiency 
+		{
+			key = 0 0.1
+			key = 250 .1
+			key = 500 1
+			key = 750 .1
+			key = 1000 0
+		}
+		HarvestThreshold = 0.015
+	}
+}
+
+

@@ -1,0 +1,59 @@
+@PART[SMX_1mInlinePump]
+{
+MODULE
+	{
+		name = ModuleResourceHarvester
+		HarvesterType = 1
+		Efficiency = 1
+		ResourceName = lqdDeuterium
+		ConverterName = lqdDeuterium Pump
+		StartActionName = Start lqdDeuterium Pump
+		StopActionName = Stop lqdDeuterium Pump 
+		ToggleActionName = Toggle lqdDeuterium Pump 
+	 INPUT_RESOURCE
+	 {
+		ResourceName = ElectricCharge
+		Ratio = 6
+	 }
+	}
+}
+
+@PART[SMX_2mStackPump]
+{
+MODULE
+	{
+		name = ModuleResourceHarvester
+		HarvesterType = 1
+		Efficiency = 1
+		ResourceName = lqdDeuterium
+		ConverterName = lqdDeuterium Pump
+		StartActionName = Start lqdDeuterium Pump
+		StopActionName = Stop lqdDeuterium Pump 
+		ToggleActionName = Toggle lqdDeuterium Pump 
+	 INPUT_RESOURCE
+	 {
+		ResourceName = ElectricCharge
+		Ratio = 6
+	 }
+	}
+}
+
+@PART[SMX_1mStackPump]
+{
+MODULE
+	{
+		name = ModuleResourceHarvester
+		HarvesterType = 1
+		Efficiency = 1
+		ResourceName = lqdDeuterium
+		ConverterName = lqdDeuterium Pump
+		StartActionName = Start lqdDeuterium Pump
+		StopActionName = Stop lqdDeuterium Pump 
+		ToggleActionName = Toggle lqdDeuterium Pump 
+	 INPUT_RESOURCE
+	 {
+		ResourceName = ElectricCharge
+		Ratio = 6
+	 }
+	}
+}
