@@ -7,3 +7,5 @@ Two version:
 2. mine deut directly (He3 not added as FFT added resource def themselves)
 
 By default first version is enabled! If you want to mine deut directly, please rename the .cfgx files inside FFTMining folder to .cfg
+
+Untested, please post issues at issues tab lol
